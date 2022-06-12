@@ -18,8 +18,8 @@ use std::mem::transmute;
 use crate::Error;
 
 pub(crate) fn read_clipboard() -> Result<Vec<String>, Error> {
-    let clipboard = macos::Clipboard::new().unwrap();
-    Ok(clipboard.read().unwrap())
+    let clipboard = Clipboard::new()?;
+    clipboard.read()
 }
 
 pub struct Clipboard {
@@ -84,7 +84,7 @@ impl Clipboard {
                 Some(s.as_str().to_owned())
             })
             .collect();
-        if results.len() == 0 {
+        if results.is_empty() {
             Err(Error::NoFiles)
         } else {
             Ok(results)
