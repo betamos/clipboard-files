@@ -1,4 +1,6 @@
-use clipboard_win::{formats, get_clipboard, Clipboard, Getter};
+use clipboard_win::{formats, get_clipboard};
+
+use crate::Error;
 
 pub(crate) fn read_clipboard() -> Result<Vec<String>, Error> {
     get_clipboard(formats::FileList {}).map_err(|_| Error::NoFiles)
