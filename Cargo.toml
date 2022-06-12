@@ -3,5 +3,6 @@ name = "clipboard-files"
 version = "0.1.0"
 edition = "2021"
 
-[dependencies]
+[target.'cfg(target_os = "linux")'.dependencies]
 gtk = "0.15"
+urlencoding = "2.1.0"
