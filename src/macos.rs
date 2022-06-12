@@ -17,6 +17,11 @@ use std::mem::transmute;
 
 use crate::Error;
 
+pub(crate) fn read_clipboard() -> Result<Vec<String>, Error> {
+    let clipboard = macos::Clipboard::new().unwrap();
+    Ok(clipboard.read().unwrap())
+}
+
 pub struct Clipboard {
     pasteboard: Id<Object>,
 }
