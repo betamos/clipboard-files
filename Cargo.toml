@@ -9,3 +9,8 @@ urlencoding = "2.1.0"
 
 [target.'cfg(target_os = "windows")'.dependencies]
 clipboard-win = "4.4.1"
+
+[target.'cfg(target_os = "macos")'.dependencies]
+objc = "0.2.7"
+objc-foundation = "0.1.1"
+objc_id = "0.1.1"
