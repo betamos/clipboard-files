@@ -1,5 +1,8 @@
 [package]
 name = "clipboard-files"
+authors = ["Didrik Nordström <https://github.com/betamos>"]
+repository = "https://github.com/betamos/clipboard-files/"
+description = "Cross-platform specialized clipboard reader for file paths"
 version = "0.1.0"
 edition = "2021"
 
