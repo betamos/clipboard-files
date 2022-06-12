@@ -1,10 +1,15 @@
 [package]
 name = "clipboard-files"
-authors = ["Didrik Nordström <https://github.com/betamos>"]
-repository = "https://github.com/betamos/clipboard-files/"
-description = "Cross-platform specialized clipboard reader for file paths"
 version = "0.1.0"
 edition = "2021"
+
+description = "Read file paths from the clipboard"
+keywords = ["clipboard"]
+authors = ["Didrik Nordström <https://github.com/betamos>"]
+repository = "https://github.com/betamos/clipboard-files/"
+homepage = "https://github.com/betamos/clipboard-files/"
+documentation = "https://docs.rs/clipboard-files/"
+license = "MIT OR Apache-2.0"
 
 [target.'cfg(target_os = "linux")'.dependencies]
 gtk = "0.15"

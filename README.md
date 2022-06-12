@@ -1,4 +1,4 @@
-## Clipboard Files
+# Clipboard Files
 
 This crate lets you read file paths from the system wide clipboard, that are copied from
 Explorer, Finder, etc.
@@ -29,3 +29,7 @@ This crate uses the GTK bindings for Linux, which offers a much simpler API.
 
 Ideally, all upstream crates should support files. When they do, we'd be better off deleting
 this one. In the meantime, use this crate.
+
+## License
+
+MIT OR Apache-2.0.
