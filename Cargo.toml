@@ -6,3 +6,6 @@ edition = "2021"
 [target.'cfg(target_os = "linux")'.dependencies]
 gtk = "0.15"
 urlencoding = "2.1.0"
+
+[target.'cfg(target_os = "windows")'.dependencies]
+clipboard-win = "4.4.1"
