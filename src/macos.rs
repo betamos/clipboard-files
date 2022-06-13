@@ -50,8 +50,11 @@ impl Clipboard {
         let ns_dict = class!(NSDictionary);
         let ns_number = class!(NSNumber);
         let options: Id<NSDictionary<NSObject, NSObject>> = unsafe {
-            let obj: Id<NSObject> = msg_send![ns_number, numberWithBool: objc::runtime::YES];
-            msg_send![ns_dict, dictionaryWithObject:obj forKey: NSPasteboardURLReadingFileURLsOnlyKey]
+            let obj: Id<NSObject> =
+                Id::from_ptr(msg_send![ns_number, numberWithBool: objc::runtime::YES]);
+            Id::from_ptr(
+                msg_send![ns_dict, dictionaryWithObject: &*obj forKey: NSPasteboardURLReadingFileURLsOnlyKey],
+            )
         };
 
         let nsurl_class: Id<NSObject> = {
