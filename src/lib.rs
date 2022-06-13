@@ -24,7 +24,7 @@ pub fn read() -> Result<Vec<PathBuf>, Error> {
     read_clipboard().map(|strs| strs.into_iter().map(PathBuf::from).collect())
 }
 
-#[derive(Debug)]
+#[derive(Debug, PartialEq)]
 pub enum Error {
     NoFiles,
     SystemError(String),
