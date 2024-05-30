@@ -12,7 +12,7 @@ documentation = "https://docs.rs/clipboard-files/"
 license = "MIT OR Apache-2.0"
 
 [target.'cfg(target_os = "linux")'.dependencies]
-gtk = "0.15"
+gtk = "0.18"
 urlencoding = "2.1.0"
 
 [target.'cfg(target_os = "windows")'.dependencies]
